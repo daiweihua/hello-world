@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/*CSS多重背景*/
+#example1 {
+  background-image: url(flower.gif), url(paper.jpg);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+/*CSS不透明度*/
+img {
+  opacity: 0.5;
+}
+/*CSS阴影*/
+h1 {
+  text-shadow: 2px 2px blue;
+}
+/*CSS圆角带有边框元素*/
+#rcorners {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 100px;
+  height: 200px;  
+}
+/*CSS导航栏*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+/*CSS链接*/
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: blue;
+}
+</style>
+</head>
+<body>
+<ul>
+  <p><b><li><a class="active" href="http://www.baidu.com" target="_blank">百度</a></li></b></p>
+  <p><b><li><a href="http://www.sina.com.cn" target="blank">新浪</a></li></b></p>
+  <p><b><li><a href="https://www.w3school.com.cn" target="blank">W3school</a></li></b></p>
+  <p><b><li><a href="https://www.wtu.edu.cn" target="blank">武汉纺织大学官网</a></li></b></p>
+</ul>
+<div id="example1">
+  <h1>Welcome to JINGLONG</h1>
+	<img src="flower.gif" alt="Tulip" width="600" height="400">
+  <p>Shanghai is one of the four direct-administered municipalities of the People's Republic of China. Welcome to Shanghai!</p>
+  <p id="rcorners">The city is located on the southern estuary of the Yangtze, with the Huangpu River flowing through it.</p>
+</div>
+
+</body>
+</html>
