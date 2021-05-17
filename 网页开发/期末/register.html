@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/verify.css">
+    <link rel="stylesheet" href="public/css/style.css">
+       <script src="public/js/jquery-1.11.1.min.js"></script>
+    
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css"  >
+    
+    <script src="public/bootstrap/js/bootstrap.min.js" ></script>
+
+
+    <script src="public/js/verify.js"></script>
+    <!--<script src="js/verify.min.js"></script>-->
+    <title>注册</title>
+
+</head>
+<body style="background-image: url(img/bg.jpg);background-size:100% 140%;background-repeat:no-repeat;">
+
+	<div class="row">
+    <div class="container col-md-4 col-md-offset-4">
+        <div class="title" style="text-align: center;">注册</div>
+        <form action="zhuce.php" method="post">
+            <input type="text" placeholder="用户名" class="xiaoyu" name="username" autocomplete="off">
+            <input type="password" placeholder="密码" class="xiaoyu" name="pwd" autocomplete="off">
+            <input type="text" placeholder="手机号码" class="xiaoyu" name="phone">
+            <input type="email" placeholder="邮箱" class="xiaoyu" name="emali">
+           <!-- <div id="slide4"></div>-->
+            <br/>
+            <div id="mpanel2" >
+            </div>
+            <br/>
+            <!--<button type="button" id="check-btn" class="verify-btn">确定</button>-->
+            <input type="submit" id="button" value="注册"> </input>
+            <span><a href="##" class="resetpwd">名字注册不能改哦</a></span>
+
+        </form>
+        <br/>
+        <button  class="button"><a href="login.html">登录</a></button>
+        <span><a href="##" class="resetpwd">有账号,直接登录</a></span>
+
+        <div class="others">
+            <span>—使用第三方账号注册—</span>
+            <ul>
+                <li><a href="##" class="fa fa-qq" title="QQ"></a></li>
+                <li><a href="##" class="fa fa-weixin" title="微信"></a></li>
+                <li><a href="##" class="fa fa-weibo" title="微博"></a></li>
+                <li><a href="##" class="fa fa-github" title="git"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+    <script>
+
+        //这里是初始化验证码标志codeVerify
+        //字母验证码
+        $('#mpanel2').slideVerify({
+            type : 1,		//类型
+            vOffset : 5,	//误差量
+            barSize : {
+                width : '80%',
+                height : '40px',
+            },
+            ready : function() {
+            },
+            success : function() {
+                alert('验证成功！');
+                //......后续操作
+            },
+            error : function() {
+		        	alert('验证失败！');
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>
